@@ -71,22 +71,22 @@ buttons = [
     ],
     [
         InlineKeyboardButton(
-            text="[ MAIN CHANNEL ]", url="https://t.me/CartooNtamilzha"),
+            text="[ ᴍᴀɪɴ ᴄʜᴀɴɴᴇʟ ]", url="https://t.me/CartooNtamilzha"),
     ],
     [
         InlineKeyboardButton(
-            text="📑 Loges", url="https://t.me/NishikataRobotlogs"),
+            text="📑 LOGS", url="https://t.me/NishikataRobotlogs"),
           
 
 
 InlineKeyboardButton(
-            text="[ SUPPORT GROUP ]", url="https://t.me/CtzChatting"
+            text="[ Sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ ]", url="https://t.me/CtzChatting"
         ),
 
     ],
     [
         InlineKeyboardButton(
-                    text="[ ANIME CHANNEL ]", url="https://t.me/SHINEI_ANIMATION"
+                    text="[ ᴀɴɪᴍᴇ ᴄʜᴀɴɴᴇʟ ]", url="https://t.me/SHINEI_ANIMATION"
         ),
     ],
 ]
