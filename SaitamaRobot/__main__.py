@@ -71,7 +71,7 @@ buttons = [
     ],
     [
         InlineKeyboardButton(
-            text="[ ᴍᴀɪɴ ᴄʜᴀɴɴᴇʟ ]", url="https://t.me/CartooNtamilzha"),
+            text="[ TAMIL CARTOONS ]", url="https://t.me/CartooNtamilzha"),
     ],
     [
         InlineKeyboardButton(
@@ -80,13 +80,13 @@ buttons = [
 
 
 InlineKeyboardButton(
-            text="[ Sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ ]", url="https://t.me/CtzChatting"
+            text="[ SUPPORT CHAT ]", url="https://t.me/CtzChatting"
         ),
 
     ],
     [
         InlineKeyboardButton(
-                    text="[ ᴀɴɪᴍᴇ ᴄʜᴀɴɴᴇʟ ]", url="https://t.me/SHINEI_ANIMATION"
+                    text="[ ANIME CHANNEL ]", url="https://t.me/SHINEI_ANIMATION"
         ),
     ],
 ]
@@ -378,7 +378,7 @@ def Source_about_callback(update, context):
     if query.data == "source_":
         query.message.edit_text(
             text=""" Hi..👦 I'm *Nishikata*
-                 \nHere is the [Our Support Group](https://t.me/Ctzchatting) .""",
+                 \nHere is the [Our Support Chat](https://t.me/Ctzchatting) .""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
@@ -675,7 +675,7 @@ def main():
 
     if SUPPORT_CHAT is not None and isinstance(SUPPORT_CHAT, str):
         try:
-            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "I'm online now! 👩‍💼")
+            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "I'm online now! 👦")
         except Unauthorized:
             LOGGER.warning(
                 "Bot isnt able to send message to support_chat, go and check!"
