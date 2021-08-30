@@ -75,12 +75,12 @@ buttons = [
     ],
     [
         InlineKeyboardButton(
-            text="📑 LOGS", url="https://t.me/YUMI_Robotlogs"),
+            text="OWNER", url="https://t.me/Ctzfamily"),
           
 
 
 InlineKeyboardButton(
-            text="[ SUPPORT CHAT ]", url="https://t.me/CtzChatting"
+            text="[ SUPPORT CHAT ]", url="https://t.me/Pegasus_force "
         ),
 
     ],
@@ -675,7 +675,7 @@ def main():
 
     if SUPPORT_CHAT is not None and isinstance(SUPPORT_CHAT, str):
         try:
-            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "I'm online now! 👦")
+            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "I'm online now!👸")
         except Unauthorized:
             LOGGER.warning(
                 "Bot isnt able to send message to support_chat, go and check!"
