@@ -75,12 +75,12 @@ buttons = [
     ],
     [
         InlineKeyboardButton(
-            text="[ OWNER ]", url="https://t.me/Ctzfamily"),
+            text="[ YOUTUBE ]", url="https://youtube.com/CartooNTamilzha"),
           
 
 
 InlineKeyboardButton(
-            text="[ SUPPORT CHAT ]", url="https://t.me/Pegasus_force "
+            text="[ SUPPORT CHAT ]", url="https://t.me/Ctzchatting"
         ),
 
     ],
