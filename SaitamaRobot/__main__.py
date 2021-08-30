@@ -75,7 +75,7 @@ buttons = [
     ],
     [
         InlineKeyboardButton(
-            text="OWNER", url="https://t.me/Ctzfamily"),
+            text="[ OWNER ]", url="https://t.me/Ctzfamily"),
           
 
 
