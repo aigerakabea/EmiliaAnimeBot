@@ -53,7 +53,7 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-`Hey There!` [👦](https://telegra.ph/file/b5a139cfe0ffac3ead902.jpg) `My name is` *Nishikata*
+`Hey There!` [👸](https://telegra.ph/file/ecbbd41d6a85e944de587.jpg) `My name is` *YUMI*
 `I am an Anime Themed group management bot.
 Managed by Izumi for Your Telegram Group , I specialize in managing anime and similar themed groups.
 You can find my list of available commands with! Hit` *🔐Commands*   
@@ -62,7 +62,7 @@ You can find my list of available commands with! Hit` *🔐Commands*
 buttons = [
     [
         InlineKeyboardButton(
-            text="➕️ ADD Nishikata TO YOUR GROUP ➕️",url="t.me/NishikataRobot?startgroup=true"),
+            text="➕️ ADD YUMI TO YOUR GROUP ➕️",url="t.me/YUMI_Robot?startgroup=true"),
     ],
     [
         InlineKeyboardButton(
@@ -75,7 +75,7 @@ buttons = [
     ],
     [
         InlineKeyboardButton(
-            text="📑 LOGS", url="https://t.me/NishikataRobotlogs"),
+            text="📑 LOGS", url="https://t.me/YUMI_Robotlogs"),
           
 
 
@@ -93,11 +93,11 @@ InlineKeyboardButton(
 
 
 HELP_STRINGS = """
-`Hey there! My name is` [Nishikata]("https://telegra.ph/file/b5a139cfe0ffac3ead902.jpg") 
+`Hey there! My name is` [YUMI]("https://telegra.ph/file/ecbbd41d6a85e944de587.jpg") 
 I'm a Half Elf and help admins manage their groups with Some Powerful Features! `Have a look at the following for an idea of some of the things I can help you with.`"""
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
- You can support the project via [Paytm](#) or by contacting @izumibotifficial\
+ You can support the project via [Paytm](#) or by contacting @Ctzfamily\
  Supporting isnt always financial! \
  Those who cannot provide monetary support are welcome to help us develop the bot at ."""
 
@@ -344,14 +344,14 @@ def gabi_about_callback(update, context):
     query = update.callback_query
     if query.data == "gabi_":
         query.message.edit_text(
-            text=""" ℹ️ I'm *Nishikata*, a powerful group management bot built to help you manage your group easily.
+            text=""" ℹ️ I'm *YUMI*, a powerful group management bot built to help you manage your group easily.
                  \n❍ I can restrict users.
                  \n❍ I can greet users with customizable welcome messages and even set a group's rules.
                  \n❍ I have an advanced anti-flood system.
                  \n❍ I can warn users until they reach max warns, with each predefined actions such as ban, mute, kick, etc.
                  \n❍ I have a note keeping system, blacklists, and even predetermined replies on certain keywords.
                  \n❍ I check for admins' permissions before executing any command and more stuffs
-                 \n\nIf you have any question about *Nishikata*, let us know at .""",
+                 \n\nIf you have any question about *YUMI*, let us know at .""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
@@ -377,7 +377,7 @@ def Source_about_callback(update, context):
     query = update.callback_query
     if query.data == "source_":
         query.message.edit_text(
-            text=""" Hi..👦 I'm *Nishikata*
+            text=""" Hi.👸 I'm *YUMI*
                  \nHere is the [Our Support Chat](https://t.me/Ctzchatting) .""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
