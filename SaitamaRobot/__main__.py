@@ -51,15 +51,15 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-Hello {},My Name is IGRIS
-𝐈 𝐀𝐌 𝐀 𝐑𝐎𝐘𝐀𝐋 𝐊𝐍𝐈𝐆𝐇𝐓 𝐅𝐑𝐎𝐌 𝐒𝐎𝐋𝐎 𝐋𝐄𝐕𝐄𝐋𝐈𝐍𝐆.
+Hello {},My Name is Valt Aoi
+𝐈 𝐀𝐌 Beylade bot  𝐅𝐑𝐎𝐌 𝐒𝐎𝐋𝐎 Super bot creater.
 I will help you manage your group.
 TO KNOW MY COMMANDS CLICK /help.
 """
 
 HELP_STRINGS = """
-Hey there! My name is *{}*.
-I'm a Shadow From Solo Leveling,I will help you manage your groups! Have a look at the following for an idea of some of \
+Hey there! My name is *Valt Aoi*.
+I'm a beylade themed bot from super bot creaters,I will help you manage your groups! Have a look at the following for an idea of some of \
 the things I can help you with.
 
 *Main* commands available:
@@ -77,7 +77,7 @@ And the following:
     dispatcher.bot.first_name, ""
     if not ALLOW_EXCL else "\nAll commands can either be used with / or !.\n")
 
-SAITAMA_IMG = "https://telegra.ph/file/3d6b5ac78befd0bffac47.mp4"
+SAITAMA_IMG = "https://telegra.ph/file/eb183a86b5fc974b56d99.jpg.mp4"
 
 DONATE_STRING = """donate to the original writer of the Base code, Paul
 There are two ways of supporting him; [PayPal](paypal.me/PaulSonOfLars), or [Monzo](monzo.me/paulnionvestergaardlarsen)."""
@@ -178,17 +178,17 @@ def start(update: Update, context: CallbackContext):
                 reply_markup=InlineKeyboardMarkup(                   
                           [[
                               InlineKeyboardButton(
-                              text="🔥Add IGRIS To Your Group🔥",
-                              url="t.me/{}?startgroup=true".format(
-                                  context.bot.username))
+                              text="🔥Add Valt Aoi To Your Group🔥",
+                              url="http://t.me/valtAoithebladersbot".format(
+                                  context.@valtAoithebladersbot))
                           ], 
                           [
                               InlineKeyboardButton(
                               text="🍁Support Group🍁",
-                              url=f"https://t.me/IGRISBOTSUPPORT"),
+                              url="https://t.me/Tamillogogiveaway"),
                               InlineKeyboardButton(
                               text="✨Updates Channel✨",
-                              url="https://t.me/IGRISROBOT_SUPPORT")
+                              url="https://t.me/BBTTbotssupport")
                           ]])) 
     else:
         update.effective_message.reply_text(
