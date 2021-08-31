@@ -53,8 +53,8 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-`Hey There!` [👩‍💼](https://telegra.ph/file/c766d686089a43e0ff33a.jpg) `My name is` *Emilia*
-`I am an Anime Themed group management bot.
+`Hey There!` [👩‍💼](https://telegra.ph/file/eb183a86b5fc974b56d99.jpg) `My name is` *Valt Aoi*
+`I am an Beyblade Themed group management bot.
 I specialize in managing anime and similar themed groups.
 You can find my list of available commands with` *🔐Commands*   
 """
@@ -62,7 +62,8 @@ You can find my list of available commands with` *🔐Commands*
 buttons = [
     [
         InlineKeyboardButton(
-            text="➕️ ADD EMILIA TO YOUR GROUP ➕️",url="t.me/EmiliaAnimeRoBot?startgroup=true"),
+            text="➕️ ADD Valt Aoi  TO YOUR GROUP ➕️",url="http://t.me/Valtaoibestbot,")
+      
     ],
     [
         InlineKeyboardButton(
@@ -71,29 +72,29 @@ buttons = [
     ],
     [
         InlineKeyboardButton(
-            text="📮 Updates Channel", url="https://t.me/TangentXOfficial"),
+            text="📮 Updates Channel", url="https://t.me/botcreaterss"),
     ],
     [
         InlineKeyboardButton(
-            text="📑 Logs", url="https://t.me/tangentlogger"),
+            text="🤗Fun chat", url="https://t.me/CrimsonDragon"),
           
 
 
 InlineKeyboardButton(
-            text="🐱 Support", url="https://t.me/TangentChats"
+            text="🐱 Support", url="https://t.me/FreeLogogiveway"
         ),
 
     ],
     [
         InlineKeyboardButton(
-                    text="✒ Source", callback_data=""
+                    text="beyblade chat ", url="https://t.me/beybladefunchat"
         ),
     ],
 ]
 
 
 HELP_STRINGS = """
-`Hey there! My name is` [Emilia!]("https://telegra.ph/file/e5fc94ada18369f89c832.jpg") 
+`Hey there") I am (Valt Aoi) ("https://telegra.ph/file/eb183a86b5fc974b56d99.jpg.")
 I'm a Half Elf and help admins manage their groups with Some Powerful Features! `Have a look at the following for an idea of some of the things I can help you with.`"""
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
@@ -344,14 +345,14 @@ def gabi_about_callback(update, context):
     query = update.callback_query
     if query.data == "gabi_":
         query.message.edit_text(
-            text=""" ℹ️ I'm *Emilia*, a powerful group management bot built to help you manage your group easily.
+            text=""" ℹ️ I'm *Valt Aoi*, a powerful group management bot built to help you manage your group easily.
                  \n❍ I can restrict users.
                  \n❍ I can greet users with customizable welcome messages and even set a group's rules.
                  \n❍ I have an advanced anti-flood system.
                  \n❍ I can warn users until they reach max warns, with each predefined actions such as ban, mute, kick, etc.
                  \n❍ I have a note keeping system, blacklists, and even predetermined replies on certain keywords.
                  \n❍ I check for admins' permissions before executing any command and more stuffs
-                 \n\nIf you have any question about *Emilia*, let us know at .""",
+                 \n\nIf you have any question about *Valt Aoi*, let us know at .""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
@@ -733,6 +734,6 @@ def main():
 
 if __name__ == '__main__':
     LOGGER.info("Successfully loaded modules: " + str(ALL_MODULES))
-    telethn.start(bot_token=TOKEN)
+    telethn.start(bot_token=1972630485:AAEPoUn4t8F_6vuCu6YwF-hE3YvS2yvd1hs)
     pgram.start()
     main()
