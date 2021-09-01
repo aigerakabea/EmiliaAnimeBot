@@ -53,8 +53,8 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-`Hey There!` [👸](https://telegra.ph/file/ecbbd41d6a85e944de587.jpg) `My name is` *YUMI*
-`I am an Anime Themed group management bot.
+`Hey There!` [👸](https://telegra.ph/file/eb183a86b5fc974b56d99.jpg) `My name is` *Valt Aoi*
+`I am an beyblade Themed group management bot.
 Managed by Izumi for Your Telegram Group , I specialize in managing anime and similar themed groups.
 You can find my list of available commands with! Hit` *🔐Commands*   
 """
@@ -62,7 +62,7 @@ You can find my list of available commands with! Hit` *🔐Commands*
 buttons = [
     [
         InlineKeyboardButton(
-            text="➕️ ADD YUMI TO YOUR GROUP ➕️",url="t.me/YUMI_Robot?startgroup=true"),
+            text="➕️ ADD VALT AOI TO YOUR GROUP ➕️",url="http://t.me/valtaoithebladerbot?startgroup=true"),
     ],
     [
         InlineKeyboardButton(
@@ -71,33 +71,33 @@ buttons = [
     ],
     [
         InlineKeyboardButton(
-            text="[ TAMIL CARTOONS ]", url="https://t.me/CartooNtamilzha"),
+            text="[ FUN CHAT ]", url="https://t.me/CrimsonDragon"),
     ],
     [
         InlineKeyboardButton(
-            text="[ YOUTUBE ]", url="https://youtube.com/CartooNTamilzha"),
+            text="[ Uptade Channel ]", url="https://t.me/Botcreatersss"),
           
 
 
 InlineKeyboardButton(
-            text="[ SUPPORT CHAT ]", url="https://t.me/Ctzchatting"
+            text="[ SUPPORT CHANNEL ]", url=https://t.me/FreeLogogiveway""
         ),
 
     ],
     [
         InlineKeyboardButton(
-                    text="[ ANIME CHANNEL ]", url="https://t.me/SHINEI_ANIMATION"
+                    text="[ BEYBLADE CHAT ]", url="https://t.me/beybladefunchat"
         ),
     ],
 ]
 
 
 HELP_STRINGS = """
-`Hey there! My name is` [YUMI]("https://telegra.ph/file/ecbbd41d6a85e944de587.jpg") 
+`Hey there! My name is` [VALT AOI ]("(https://telegra.ph/file/eb183a86b5fc974b56d99.jpg") 
 I'm a Half Elf and help admins manage their groups with Some Powerful Features! `Have a look at the following for an idea of some of the things I can help you with.`"""
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
- You can support the project via [Paytm](#) or by contacting @Ctzfamily\
+ You can support the project via [Paytm](#) or by contacting @crimsonflashs\
  Supporting isnt always financial! \
  Those who cannot provide monetary support are welcome to help us develop the bot at ."""
 
@@ -344,14 +344,14 @@ def gabi_about_callback(update, context):
     query = update.callback_query
     if query.data == "gabi_":
         query.message.edit_text(
-            text=""" ℹ️ I'm *YUMI*, a powerful group management bot built to help you manage your group easily.
+            text=""" ℹ️ I'm *VALT AOI *, a powerful group management bot built to help you manage your group easily.
                  \n❍ I can restrict users.
                  \n❍ I can greet users with customizable welcome messages and even set a group's rules.
                  \n❍ I have an advanced anti-flood system.
                  \n❍ I can warn users until they reach max warns, with each predefined actions such as ban, mute, kick, etc.
                  \n❍ I have a note keeping system, blacklists, and even predetermined replies on certain keywords.
                  \n❍ I check for admins' permissions before executing any command and more stuffs
-                 \n\nIf you have any question about *YUMI*, let us know at .""",
+                 \n\nIf you have any question about *VALT AOI*, let us know at .""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
@@ -377,8 +377,8 @@ def Source_about_callback(update, context):
     query = update.callback_query
     if query.data == "source_":
         query.message.edit_text(
-            text=""" Hi.👸 I'm *YUMI*
-                 \nHere is the [Our Support Chat](https://t.me/Ctzchatting) .""",
+            text=""" Hi.👸 I'm *VALT AOI*
+                 \nHere is the [Our Support Chat](https://t.me/CrimsonDragon) .""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
