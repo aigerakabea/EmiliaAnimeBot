@@ -80,7 +80,7 @@ buttons = [
 
 
 InlineKeyboardButton(
-            text="[ SUPPORT CHANNEL ]", url=https://t.me/FreeLogogiveway""
+            text="[ SUPPORT CHANNEL ]", url="https://t.me/FreeLogogiveway"),
         ),
 
     ],
@@ -344,14 +344,14 @@ def gabi_about_callback(update, context):
     query = update.callback_query
     if query.data == "gabi_":
         query.message.edit_text(
-            text=""" ℹ️ I'm *VALT AOI *, a powerful group management bot built to help you manage your group easily.
+            text=""" ℹ️ I'm *aiger *, a powerful group management bot built to help you manage your group easily.
                  \n❍ I can restrict users.
                  \n❍ I can greet users with customizable welcome messages and even set a group's rules.
                  \n❍ I have an advanced anti-flood system.
                  \n❍ I can warn users until they reach max warns, with each predefined actions such as ban, mute, kick, etc.
                  \n❍ I have a note keeping system, blacklists, and even predetermined replies on certain keywords.
                  \n❍ I check for admins' permissions before executing any command and more stuffs
-                 \n\nIf you have any question about *VALT AOI*, let us know at .""",
+                 \n\nIf you have any question about *Aiger*, let us know at .""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
