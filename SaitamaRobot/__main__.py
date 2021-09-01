@@ -8,8 +8,7 @@ from typing import Optional
 from SaitamaRobot import (ALLOW_EXCL, CERT_PATH, DONATION_LINK, LOGGER,
                           OWNER_ID, PORT, SUPPORT_CHAT, TOKEN, URL, WEBHOOK,
                           dispatcher, StartTime, telethn, updater, pgram)
-# needed to dynamically load modules
-# NOTE: Module order is not guaranteed, specify that in the config file!
+
 from SaitamaRobot.modules import ALL_MODULES
 from SaitamaRobot.modules.helper_funcs.chat_status import is_user_admin
 from SaitamaRobot.modules.helper_funcs.misc import paginate_modules
@@ -21,6 +20,8 @@ from telegram.ext import (CallbackContext, CallbackQueryHandler, CommandHandler,
                           Filters, MessageHandler)
 from telegram.ext.dispatcher import DispatcherHandlerStop, run_async
 from telegram.utils.helpers import escape_markdown
+
+EMILIA_IMG = "https://telegra.ph/file/eb183a86b5fc974b56d99.jpg"
 
 
 def get_readable_time(seconds: int) -> str:
@@ -53,53 +54,55 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-`Hey There!` [👸](https://telegra.ph/file/eb183a86b5fc974b56d99.jpg) `My name is` *Valt Aoi*
-`I am an beyblade Themed group management bot.
-Managed by Izumi for Your Telegram Group , I specialize in managing anime and similar themed groups.
-You can find my list of available commands with! Hit` *🔐Commands*   
+`Hey There!` [👩‍💼](https://telegra.ph/file/eb183a86b5fc974b56d99.jpg) 
+`My name is` *VALT AOI *`
+`I am an BEYBLADE Themed group management bot.`
+You can find my list of available commands with` *🔐Commands*   
 """
 
 buttons = [
     [
         InlineKeyboardButton(
-            text="➕️ ADD VALT AOI TO YOUR GROUP ➕️",url="http://t.me/valtaoithebladerbot?startgroup=true"),
+            text="➕️ ADD VALT AOI TO YOUR GROUP ➕️",url="http://t.me/valtaoibladerbot?startgroup=true"
+        ),
     ],
     [
         InlineKeyboardButton(
-              text="🔐 Command & Help", callback_data="help_back"),
+          text="🔐 Commands", callback_data="help_back"
+        ),
+    ],
+    [
+        InlineKeyboardButton(
+          text="📮 Updates", url="https://t.me/Botcreatersss"
+        ),
+      
+        InlineKeyboardButton(
+          text="FUN CHAT", url="https://t.me/CrimsonDragonr"
+        ),
+    ],
+         
+    [
+       InlineKeyboardButton(
+           text="🐱 Support", url="https://t.me/FreeLogogiveway"
+         ),
+    ],
+    [
+        InlineKeyboardButton(
+          text="BEYBLADE  CHAT ", URL="https://t.me/beybladefunchat"
+        ),
      
-    ],
-    [
-        InlineKeyboardButton(
-            text="[ FUN CHAT ]", url="https://t.me/CrimsonDragon"),
-    ],
-    [
-        InlineKeyboardButton(
-            text="[ Uptade Channel ]", url="https://t.me/Botcreatersss"),
-          
-
-
-InlineKeyboardButton(
-            text="[ SUPPORT CHANNEL ]", url="https://t.me/FreeLogogiveway"),
-        ),
-
-    ],
-    [
-        InlineKeyboardButton(
-                    text="[ BEYBLADE CHAT ]", url="https://t.me/beybladefunchat"
-        ),
     ],
 ]
 
 
 HELP_STRINGS = """
-`Hey there! My name is` [VALT AOI ]("(https://telegra.ph/file/eb183a86b5fc974b56d99.jpg") 
+`Hey there! My name is` [VALT AOI!]("https://telegra.ph/file/eb183a86b5fc974b56d99.jpg") 
 I'm a Half Elf and help admins manage their groups with Some Powerful Features! `Have a look at the following for an idea of some of the things I can help you with.`"""
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
- You can support the project via [Paytm](#) or by contacting @crimsonflashs\
- Supporting isnt always financial! \
- Those who cannot provide monetary support are welcome to help us develop the bot at ."""
+ I'd Like you to Donate that Money to Some Charity. 
+ Thanks!
+"""
 
 IMPORTED = {}
 MIGRATEABLE = []
@@ -208,13 +211,22 @@ def start(update: Update, context: CallbackContext):
                 timeout=60,
             )
     else:
-        update.effective_message.reply_text(
-            "I'm awake already!\n<b>Haven't slept since:</b> <code>{}</code>".format(
+        update.effective_message.reply_photo(
+            EMILIA_IMG, caption= "`Emilia is Here For You❤\nI am Awake Since:` <code>{}</code>".format(
                 uptime
             ),
             parse_mode=ParseMode.HTML,
+            reply_markup=InlineKeyboardMarkup(
+                [
+                  [
+                  InlineKeyboardButton(text="Sᴜᴘᴘᴏʀᴛ", url="https://t.me/FreeLogogiveway")
+                  ],
+                  [
+                  InlineKeyboardButton(text="Sᴏᴜʀᴄᴇ", url="https://t.me/beybladefunchat")
+                  ]
+                ]
+            ),
         )
-
 
 def error_handler(update, context):
     """Log the error and send a telegram message to notify the developer."""
@@ -344,14 +356,14 @@ def gabi_about_callback(update, context):
     query = update.callback_query
     if query.data == "gabi_":
         query.message.edit_text(
-            text=""" ℹ️ I'm *aiger *, a powerful group management bot built to help you manage your group easily.
+            text=""" ℹ️ I'm *VALT AOI*, a powerful group management bot built to help you manage your group easily.
                  \n❍ I can restrict users.
                  \n❍ I can greet users with customizable welcome messages and even set a group's rules.
                  \n❍ I have an advanced anti-flood system.
                  \n❍ I can warn users until they reach max warns, with each predefined actions such as ban, mute, kick, etc.
                  \n❍ I have a note keeping system, blacklists, and even predetermined replies on certain keywords.
                  \n❍ I check for admins' permissions before executing any command and more stuffs
-                 \n\nIf you have any question about *Aiger*, let us know at .""",
+                 \n\nIf you have any question about *VALT AOI*, let us know at .""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
@@ -377,8 +389,8 @@ def Source_about_callback(update, context):
     query = update.callback_query
     if query.data == "source_":
         query.message.edit_text(
-            text=""" Hi.👸 I'm *VALT AOI*
-                 \nHere is the [Our Support Chat](https://t.me/CrimsonDragon) .""",
+            text=""" Hi..👩‍💼 I'm *VALT AOI*
+                 \nMy Source Code Can be Found at Github at this [Link](https://github.com/IzumiCypherX/EmiliaAnimeBot""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
@@ -675,7 +687,7 @@ def main():
 
     if SUPPORT_CHAT is not None and isinstance(SUPPORT_CHAT, str):
         try:
-            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "I'm online now!👸")
+            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "Emilia is Back Online💼")
         except Unauthorized:
             LOGGER.warning(
                 "Bot isnt able to send message to support_chat, go and check!"
