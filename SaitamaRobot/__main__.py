@@ -63,7 +63,7 @@ You can find my list of available commands with` *🔐Commands*
 buttons = [
     [
         InlineKeyboardButton(
-            text="➕️ ADD VALT AOI TO YOUR GROUP ➕️",url="http://t.me/valtaoibladerbot?startgroup=true"
+            text="➕️ ADD VALT AOI TO YOUR GROUP ➕️",url="http://t.me/valtaoiybot?startgroup=true"
         ),
     ],
     [
