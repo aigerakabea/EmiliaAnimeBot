@@ -57,6 +57,9 @@ PM_START_TEXT = """
 `Hey There!` [👩‍💼](https://telegra.ph/file/eb183a86b5fc974b56d99.jpg) 
 `My name is` *VALT AOI *`
 `I am an BEYBLADE Themed group management bot.`
+Managed by Pigasus Updates for Your Telegram Group
+
+Join @PigasusUpdates & @PigasusSupport
 You can find my list of available commands with` *🔐Commands*   
 """
 
