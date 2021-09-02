@@ -63,7 +63,7 @@ You can find my list of available commands with` *🔐Commands*
 buttons = [
     [
         InlineKeyboardButton(
-            text="➕️ ADD VALT AOI TO YOUR GROUP ➕️",url="http://t.me/valtaoiybot?startgroup=true"
+            text="➕️ ADD VALT AOI TO YOUR GROUP ➕️",url="http://t.me/valtaoibestbot?startgroup=true"
         ),
     ],
     [
@@ -73,7 +73,7 @@ buttons = [
     ],
     [
         InlineKeyboardButton(
-          text="📮 Updates", url="https://t.me/Botcreatersss"
+          text="📮 Updates", url="https://t.me/PigasusUpdates"
         ),
       
         InlineKeyboardButton(
@@ -83,7 +83,7 @@ buttons = [
          
     [
        InlineKeyboardButton(
-           text="🐱 Support", url="https://t.me/FreeLogogiveway"
+           text="🐱 Support", url="https://t.me/PigasusSupport"
          ),
     ],
     [
@@ -219,10 +219,10 @@ def start(update: Update, context: CallbackContext):
             reply_markup=InlineKeyboardMarkup(
                 [
                   [
-                  InlineKeyboardButton(text="Sᴜᴘᴘᴏʀᴛ", url="https://t.me/FreeLogogiveway")
+                  InlineKeyboardButton(text="Sᴜᴘᴘᴏʀᴛ", url="https://t.me/PigasusSupport")
                   ],
                   [
-                  InlineKeyboardButton(text="Sᴏᴜʀᴄᴇ", url="https://t.me/beybladefunchat")
+                  InlineKeyboardButton(text="beyblade chat", url="https://t.me/beybladefunchat")
                   ]
                 ]
             ),
