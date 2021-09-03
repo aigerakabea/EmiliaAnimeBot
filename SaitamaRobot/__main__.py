@@ -54,6 +54,7 @@ def get_readable_time(seconds: int) -> str:
 
 PM_START_TEXT = """
 `Hey There!` [👸](https://telegra.ph/file/ccec67f1b6e6389701f13.jpg) `My name is` *SHU KURENAI*
+
 `I am an cartoon Themed group management bot.
 
 Managed by Pigasus Updates for Your Telegram Group
