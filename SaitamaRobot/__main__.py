@@ -60,13 +60,14 @@ PM_START_TEXT = """
 Managed by Pigasus Updates for Your Telegram Group
 
 Join @PigasusUpdates & @PigasusSupport.
+
 You can find my list of available commands with! Hit` *🔐Commands*   
 """
 
 buttons = [
     [
         InlineKeyboardButton(
-            text="[ADD GINGKA HAGANE TO YOUR GROUP]",url="http://t.me/ShuKurenaithebot?startgroup=true"),
+            text="[ADD SHU KURENAI TO YOUR GROUP]",url="http://t.me/ShuKurenaithebot?startgroup=true"),
     ],
     [
         InlineKeyboardButton(
