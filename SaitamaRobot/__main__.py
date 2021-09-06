@@ -76,7 +76,7 @@ buttons = [
     ],
     [
         InlineKeyboardButton(
-            text="[UPDATE CHANNEL ]", url="https://t.me/pigasusUpdates"),
+            text="[ UPDATE CHANNEL ]", url="https://t.me/pigasusUpdates"),
     ],
     [
         InlineKeyboardButton(
@@ -85,7 +85,7 @@ buttons = [
 
 
 InlineKeyboardButton(
-            text="[ FUN CHAT]", url="https://t.me/CrimsonDragon"
+            text="[ CHECK MY FRIEND ]", url="http://t.me/ShuKurenaithebot"
         ),
 
     ],
