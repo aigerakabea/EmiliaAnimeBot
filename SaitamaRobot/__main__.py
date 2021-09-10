@@ -5,14 +5,13 @@ import re
 from sys import argv
 from typing import Optional
 
-from SaitamaRobot import (ALLOW_EXCL, CERT_PATH, DONATION_LINK, LOGGER,
+from EmiliaAnimeBot import (ALLOW_EXCL, CERT_PATH, DONATION_LINK, LOGGER,
                           OWNER_ID, PORT, SUPPORT_CHAT, TOKEN, URL, WEBHOOK,
                           dispatcher, StartTime, telethn, updater, pgram)
-# needed to dynamically load modules
-# NOTE: Module order is not guaranteed, specify that in the config file!
-from SaitamaRobot.modules import ALL_MODULES
-from SaitamaRobot.modules.helper_funcs.chat_status import is_user_admin
-from SaitamaRobot.modules.helper_funcs.misc import paginate_modules
+
+from EmiliaAnimeBot.modules import ALL_MODULES
+from EmiliaAnimeBot.modules.helper_funcs.chat_status import is_user_admin
+from EmiliaAnimeBot.modules.helper_funcs.misc import paginate_modules
 from telegram import (InlineKeyboardButton, InlineKeyboardMarkup, ParseMode,
                       Update)
 from telegram.error import (BadRequest, ChatMigrated, NetworkError,
@@ -21,6 +20,8 @@ from telegram.ext import (CallbackContext, CallbackQueryHandler, CommandHandler,
                           Filters, MessageHandler)
 from telegram.ext.dispatcher import DispatcherHandlerStop, run_async
 from telegram.utils.helpers import escape_markdown
+
+EMILIA_IMG = "https://telegra.ph/file/c13d2c450e047a095ea18.jpg"
 
 
 def get_readable_time(seconds: int) -> str:
@@ -53,58 +54,53 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-`Hey There!` ! [🧑🏻‍💻](https://telegra.ph/file/2f3b44fe102dfdb2e3630.jpg) `My name is` *SHU KURENAI*
-
-`I am an cartoon Themed group management bot.
-
-Managed by Pigasus Updates for Your Telegram Group
-
-Join @PigasusUpdates & @PigasusSupport.
-
-You can find my list of available commands with! Hit` *🔐Commands*   
+Hey There! [👩‍💼](https://telegra.ph/file/d62ddd0f18b333b6aafff.jpg) 
+My name is *Yuuki*
+I am an Anime Themed group management bot.
+You can find my list of available commands with *🔐Commands*   
 """
 
 buttons = [
     [
         InlineKeyboardButton(
-            text="[ADD SHU KURENAI TO YOUR GROUP]",url="http://t.me/ShuKurenaithebot?startgroup=true"),
-    ],
-    [
-        InlineKeyboardButton(
-              text="🔐 Command & Help", callback_data="help_back"),
-     
-    ],
-    [
-        InlineKeyboardButton(
-            text="[ UPDATE CHANNEL ]", url="https://t.me/pigasusUpdates"),
-    ],
-    [
-        InlineKeyboardButton(
-            text="[ SUPPORT CHAT ]", url="https://t.me/pigasusSupport"),
-          
-
-
-InlineKeyboardButton(
-            text="[ CHECK MY FRIEND ]", url="http://t.me/VALTAOITHEBOT"
-        ),
-
-    ],
-    [
-        InlineKeyboardButton(
-                    text="[ ✘BOT Cʀᴇᴀᴛᴇʀ✘ ]", url="https://t.me/Rohith_no_1"
+            text="😍𝗦𝗨𝗠𝗠𝗢𝗡 𝗠𝗘😍",url="t.me/YuukiKonnoRobot?startgroup=true"
         ),
     ],
+    [
+        InlineKeyboardButton(
+          text="🥰𝗖𝗢𝗠𝗠𝗔𝗡𝗗𝗦🥰", callback_data="help_back"
+        ),
+    ],
+   
+         
+    [
+       InlineKeyboardButton(
+           text="💖𝗦𝗨𝗣𝗣𝗢𝗥𝗧💖", url="https://t.me/PigasusSupport"
+         ),
+    ],
+        [
+       InlineKeyboardButton(
+           text="💝𝗢𝗪𝗡𝗘𝗥💝", url="https://t.me/Me_Iz_Mad_Boi"
+         ),
+     ],
+     [
+        InlineKeyboardButton(
+          text="💖𝗨𝗣𝗗𝗔𝗧𝗘𝗦💖", url="https://t.me/PigasusUpdates"
+        ),
+       
+     ],
 ]
 
 
 HELP_STRINGS = """
-`Hey there! My name is` [SHU KURENAI]("https://telegra.ph/file/2f3b44fe102dfdb2e3630.jpg") 
-I'm a Half Elf and help admins manage their groups with Some Powerful Features! `Have a look at the following for an idea of some of the things I can help you with.`"""
+`Hey there! My name is` [Yuuki!]("https://telegra.ph/file/72f58e5643fe6b39f5cca.jpg") 
+I'm a Half Elf and help admins manage their groups with Some Powerful Features! \n`Have a look at the following for an idea of some of the things I can help you with.`"""
 
-DONATE_STRING = """Heya, glad to hear you want to donate!
- You can support the project via [Paytm](#) or by contacting @Rohith_no_1\
- Supporting isnt always financial! \
- Those who cannot provide monetary support are welcome to help us develop the bot at ."""
+DONATE_STRING = """
+Heya, glad to hear you want to donate!
+I'd Like you to Donate that Money to Some Charity. 
+Thanks!
+"""
 
 IMPORTED = {}
 MIGRATEABLE = []
@@ -117,7 +113,7 @@ CHAT_SETTINGS = {}
 USER_SETTINGS = {}
 
 for module_name in ALL_MODULES:
-    imported_module = importlib.import_module("SaitamaRobot.modules." + module_name)
+    imported_module = importlib.import_module("EmiliaAnimeBot.modules." + module_name)
     if not hasattr(imported_module, "__mod_name__"):
         imported_module.__mod_name__ = imported_module.__name__
 
@@ -168,7 +164,7 @@ def send_help(chat_id, text, keyboard=None):
 @run_async
 def test(update: Update, context: CallbackContext):
     # pprint(eval(str(update)))
-    # update.effective_message.reply_text("Hola tester! _I_ *have* `markdown`", parse_mode=ParseMode.MARKDOWN)
+    update.effective_message.reply_text("Hola tester! _I_ *have* `markdown`", parse_mode=ParseMode.MARKDOWN)
     update.effective_message.reply_text("This person edited a message")
     print(update.effective_message)
 
@@ -187,7 +183,7 @@ def start(update: Update, context: CallbackContext):
                     return
                 send_help(
                     update.effective_chat.id,
-                    HELPABLE[mod].__help__,
+                    HELPABLE[mod].help,
                     InlineKeyboardMarkup(
                         [[InlineKeyboardButton(text="⬅️ BACK", callback_data="help_back")]]
                     ),
@@ -214,22 +210,24 @@ def start(update: Update, context: CallbackContext):
             )
     else:
         update.effective_message.reply_photo(
-            EMILIA_IMG, caption= "`Emilia is Here For You❤\nI am Awake Since:` <code>{}</code>".format(
+            EMILIA_IMG, caption= "YUUKI is Here For You❤️\nI am Awake Since: <code>{}</code>".format(
                 uptime
             ),
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
                 [
                   [
-                  InlineKeyboardButton(text="[ ✘Sᴜᴘᴘᴏʀᴛ Cʜᴀᴛ✘ ]", url="https://t.me/pigasusSupport")
+                  InlineKeyboardButton(text="💞𝗦𝗨𝗣𝗣𝗢𝗥𝗧💞", url="https://t.me/PigasusSupport")
                   ],
                   [
-                  InlineKeyboardButton(text="[ ✘Cʀᴇᴀᴛᴇʀ✘ ]", url="https://t.me/Rohith_no_1")
+                  InlineKeyboardButton(text="💞𝗦𝗢𝗨𝗥𝗖𝗘💞", url="https://github.com/EmiliaAnimeBot")
+                  ],
+                  [
+                  InlineKeyboardButton(text="💘𝗢𝗪𝗡𝗘𝗥💘", url="https://t.me/Me_Iz_Mad_Boi")
                   ]
                 ]
             ),
         )
-
 
 def error_handler(update, context):
     """Log the error and send a telegram message to notify the developer."""
@@ -243,7 +241,7 @@ def error_handler(update, context):
     )
     tb = "".join(tb_list)
 
-    # Build the message with some markup and additional information about what happened.
+
     message = (
         "An exception was raised while handling an update\n"
         "<pre>update = {}</pre>\n\n"
@@ -255,7 +253,7 @@ def error_handler(update, context):
 
     if len(message) >= 4096:
         message = message[:4096]
-    # Finally, send the message
+
     context.bot.send_message(chat_id=OWNER_ID, text=message, parse_mode=ParseMode.HTML)
 
 
@@ -359,14 +357,14 @@ def gabi_about_callback(update, context):
     query = update.callback_query
     if query.data == "gabi_":
         query.message.edit_text(
-            text=""" ℹ️ I'm *SHU KURENAI*, a powerful group management bot built to help you manage your group easily.
+            text=""" ℹ️ I'm *Yuuki*, a powerful group management bot built to help you manage your group easily.
                  \n❍ I can restrict users.
                  \n❍ I can greet users with customizable welcome messages and even set a group's rules.
                  \n❍ I have an advanced anti-flood system.
                  \n❍ I can warn users until they reach max warns, with each predefined actions such as ban, mute, kick, etc.
                  \n❍ I have a note keeping system, blacklists, and even predetermined replies on certain keywords.
                  \n❍ I check for admins' permissions before executing any command and more stuffs
-                 \n\nIf you have any question about *SHU KURENAI*, let us know at .""",
+                 \n\nIf you have any question about *Yuuki*, let us know at .""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
@@ -392,8 +390,8 @@ def Source_about_callback(update, context):
     query = update.callback_query
     if query.data == "source_":
         query.message.edit_text(
-            text=""" Hi..👸 I'm *SHU KURENAI*
-                 \nHere is the [Sᴜᴘᴘᴏʀᴛ Cʜᴀᴛ](https://t.me/pigasusSupport) .""",
+            text=""" Hi..👩‍💼 I'm *Yuuki*
+                 \nMy Source Code Can be Found at Github at this [Link](https://github.com/IzumiCypherX/EmiliaAnimeBot""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
@@ -465,7 +463,10 @@ def get_help(update: Update, context: CallbackContext):
             chat.id,
             text,
             InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="Back", callback_data="help_back")]]
+                [[InlineKeyboardButton(text="Back", callback_data="help_back"),
+                                InlineKeyboardButton(
+                                    text="Support", url="https://t.me/PigasusSupport"
+                                )]]
             ),
         )
 
@@ -690,7 +691,7 @@ def main():
 
     if SUPPORT_CHAT is not None and isinstance(SUPPORT_CHAT, str):
         try:
-            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "Hᴇʏ Yᴏᴜʀ SHU KURENAI Is Oɴʟɪɴᴇ")
+            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "Yuuki is Back Online💼")
         except Unauthorized:
             LOGGER.warning(
                 "Bot isnt able to send message to support_chat, go and check!"
@@ -713,12 +714,13 @@ def main():
     donate_handler = CommandHandler("donate", donate)
     migrate_handler = MessageHandler(Filters.status_update.migrate, migrate_chats)
 
-    # dispatcher.add_handler(test_handler)
+    dispatcher.add_handler(test_handler)
     dispatcher.add_handler(start_handler)
     dispatcher.add_handler(help_handler)
     dispatcher.add_handler(about_callback_handler)
     dispatcher.add_handler(settings_handler)
     dispatcher.add_handler(help_callback_handler)
+    dispatcher.add_handler(source_callback_handler)
     dispatcher.add_handler(settings_callback_handler)
     dispatcher.add_handler(migrate_handler)
     dispatcher.add_handler(donate_handler)
@@ -751,4 +753,3 @@ if __name__ == '__main__':
     telethn.start(bot_token=TOKEN)
     pgram.start()
     main()
-
