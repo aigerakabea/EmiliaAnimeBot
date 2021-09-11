@@ -8,23 +8,13 @@ from PIL import Image, ImageDraw, ImageFont
 
 logopics = [
  
- "./EmiliaAnimeBot/resources/logopics/LogoFile1.jpg",
-	
- "./EmiliaAnimeBot/resources/logopics/LogoFile2.jpg",
-	
- "./EmiliaAnimeBot/resources/logopics/LogoFile3.jpg",
-	
- "./EmiliaAnimeBot/resources/logopics/LogoFile4.jpg"
+ "./EmiliaAnimeBot/SaitamaRobot/resources/photo_2021-09-11_10-52-54.jpg"
  
 ]
 
 logofonts = [
  
- "./EmiliaAnimeBot/resources/logofonts/RemachineScriptPersonalUseOnly-yZL3.ttf",
-	
- "./EmiliaAnimeBot/resources/logofonts/beyond-wonderland.regular.ttf",
-	
- "./EmiliaAnimeBot/resources/logofonts/Respective-VP6y.ttf"
+ ".EmiliaAnimeBot/Saitamarobot/resources/Beyblade Metal Fight Font.ttf"
  
 ]
 
@@ -51,7 +41,7 @@ async def lego(event):
     draw = ImageDraw.Draw(img)
     image_widthz, image_heightz = img.size
     pointsize = 500
-    fillcolor = "gold"
+    fillcolor = "blue"
     shadowcolor = "blue"
     font = ImageFont.truetype(font_choice , 330)
     w, h = draw.textsize(text, font=font)
