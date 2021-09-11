@@ -1,4 +1,3 @@
-Rohith, [03.09.21 11:10]
 import importlib
 import html
 import time
@@ -128,7 +127,6 @@ for module_name in ALL_MODULES:
     if hasattr(imported_module, "help") and imported_module.help:
         HELPABLE[imported_module.mod_name.lower()] = imported_module
 
-Rohith, [03.09.21 11:10]
 # Chats to migrate on chat_migrated events
     if hasattr(imported_module, "migrate"):
         MIGRATEABLE.append(imported_module)
@@ -563,8 +561,6 @@ def settings_button(update: Update, context: CallbackContext):
                     )
                 ),
             )
-
-Rohith, [03.09.21 11:10]
 elif next_match:
             chat_id = next_match.group(1)
             next_page = int(next_match.group(2))
